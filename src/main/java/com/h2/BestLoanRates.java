@@ -9,11 +9,12 @@ public class BestLoanRates {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter your name");
-        String name = scan.nextLine();
-        System.out.println("Hello "+ name);
+        String name = scan.next();
+        System.out.println("Hello " + name);
         System.out.println("Enter the loan term (in years)");
         int loanTermInYears = scan.nextInt();
         float bestRate = getRates(loanTermInYears);
+
         if(bestRate == 0.0f){
             System.out.println("No available rates for term: " + loanTermInYears + " years");
         } else {
